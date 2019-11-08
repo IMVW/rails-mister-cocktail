@@ -1,0 +1,21 @@
+<h1>Cocktails index</h1>
+
+
+<!-- A user can see the list of cocktails -->
+
+<button><%= link_to "add cocktail", new_cocktail_path%></button>
+
+<div class="container">
+  <div class="row">
+    <h1>All the cocktails</h1>
+
+      <% @cocktails.each do |cocktail| %>
+      <h2>  <%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
+      <% end %>
+
+  </div>
+</div>
+
+
+
+
